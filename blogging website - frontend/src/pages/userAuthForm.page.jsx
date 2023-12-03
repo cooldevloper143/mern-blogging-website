@@ -32,6 +32,20 @@ const UserAuthForm = ({ type }) => {
           icon={"fi-sr-key"}
 
         />
+        <button
+          className="btn-dark center mt-14 "
+          type="submit"
+        >
+          {type == "signin" ? "sign in" : "sign up"}
+        </button>
+
+        <div className="relative w-[100%] flex items-center gap-2 my-10 opacity-10 uppercase text-black font-bold ">
+          <hr className="w-1/2 border-black" />
+          <p>or</p>
+          <hr className="w-1/2 border-black" />
+
+        </div>
+
       </form>
     </section>
   );
