@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import 'dotenv/config';
 
 
 
@@ -8,7 +9,10 @@ const server = express();
 let PORT = process.env.PORT || 3001;
 
 try {
-    mongoose.connect("mongodb+srv://aisarthak2:45YuS7tdMClDDgSd@cluster0.mj3b3jf.mongodb.net")
+    mongoose.connect(process.env.DB_LOCATION , {
+         autoIndex: true,
+
+    })
     console.log("Connected to MongoDB successfully✅✅✅😎") 
     
 } catch (error) {
