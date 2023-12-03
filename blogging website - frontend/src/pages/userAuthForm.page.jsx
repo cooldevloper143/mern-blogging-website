@@ -1,6 +1,6 @@
 import InputBox from "../components/input.component";
 import googleIcon from "../imgs/google.png";
-
+import { Link } from "react-router-dom";
 
 const UserAuthForm = ({ type }) => {
   return (
@@ -53,6 +53,26 @@ const UserAuthForm = ({ type }) => {
 
           continue with google
         </button>
+
+        {
+
+          type == "sign-in" ?
+            <p className="mt-6 text-dark-grey text-xl text-center">
+              Dont have a account?
+              <Link to="/signup" className="underline text-black text-xl ml-1">
+                join us today
+              </Link>
+            </p> : <p className="mt-6 text-dark-grey text-xl text-center">
+              Already a member?
+              <Link to="/signup" className="underline text-black text-xl ml-1">
+                sign in here .
+
+              </Link>
+            </p>
+
+
+
+        }
 
       </form>
     </section>
