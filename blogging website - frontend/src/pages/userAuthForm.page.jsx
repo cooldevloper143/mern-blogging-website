@@ -1,4 +1,6 @@
 import InputBox from "../components/input.component";
+import googleIcon from "../imgs/google.png";
+
 
 const UserAuthForm = ({ type }) => {
   return (
@@ -45,6 +47,12 @@ const UserAuthForm = ({ type }) => {
           <hr className="w-1/2 border-black" />
 
         </div>
+
+        <button className="btn-dark flex items-center justify-center gap-4 w-[90%] center">
+          <img src={googleIcon} className="w-5 " alt="" />
+
+          continue with google
+        </button>
 
       </form>
     </section>
