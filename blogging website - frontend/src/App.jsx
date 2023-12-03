@@ -1,13 +1,14 @@
 
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar.component.jsx";
+import UserAuthForm from "./pages/userAuthForm.page.jsx";
 
 const App = () => {
     return (
         <Routes>
             <Route path="/" element={<Navbar />} >
-                <Route path="/signin" element={<h1>signin page</h1>} />
-                <Route path="/signup" element={<h1>signup page</h1>} />
+                <Route path="/signin" element={<UserAuthForm type={"signin"} />} />
+                <Route path="/signup" element={<UserAuthForm type={"signup"} />} />
             </Route>
 
         </Routes>
